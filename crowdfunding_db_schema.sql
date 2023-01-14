@@ -26,7 +26,7 @@ CREATE TABLE "category" (
     "category_id" varchar(10)   NOT NULL,
     "category_name" varchar(50)   NOT NULL,
     CONSTRAINT "pk_category" PRIMARY KEY (
-        "category_name"
+        "category_id"
      )
 );
 
@@ -34,7 +34,7 @@ CREATE TABLE "subcategory" (
     "subcategory_id" varchar(10)   NOT NULL,
     "subcategory_name" varchar(50)   NOT NULL,
     CONSTRAINT "pk_subcategory" PRIMARY KEY (
-        "subcategory_name"
+        "subcategory_id"
      )
 );
 
