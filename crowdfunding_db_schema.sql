@@ -42,7 +42,7 @@ CREATE TABLE "contacts" (
     "contact_id" int   NOT NULL,
     "first_name" varchar(50)   NOT NULL,
     "last_name" varchar(50)   NOT NULL,
-    "email" (varchar100)   NOT NULL,
+    "email" varchar(100)   NOT NULL,
     CONSTRAINT "pk_contacts" PRIMARY KEY (
         "contact_id"
      )
@@ -59,8 +59,8 @@ CREATE TABLE "backers" (
      )
 );
 
-ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_cf_id" FOREIGN KEY("cf_id")
-REFERENCES "backers" ("cf_id");
+ALTER TABLE "backers" ADD CONSTRAINT "fk_backers_cf_id" FOREIGN KEY("cf_id")
+REFERENCES "campaign" ("cf_id");
 
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_contact_id" FOREIGN KEY("contact_id")
 REFERENCES "contacts" ("contact_id");
