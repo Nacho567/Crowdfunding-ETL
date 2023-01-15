@@ -34,6 +34,7 @@ ORDER BY remaining_goal_amount DESC;
 
 -- Check the table
 
+SELECT * FROM email_contacts_remaining_goal_amount;
 
 -- 4. (5 pts)
 -- Create a table, "email_backers_remaining_goal_amount" that contains the email address of each backer in descending order, 
@@ -59,4 +60,4 @@ ORDER BY b.last_name;
 
 -- Check the table
 
-
+SELECT * FROM email_backers_remaining_goal_amount;
